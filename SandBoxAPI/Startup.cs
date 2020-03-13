@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using SandBoxAPI.Data;
+using SandBoxAPI.Services;
 
 namespace SandBoxAPI
 {
@@ -26,6 +29,11 @@ namespace SandBoxAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
+
+            services.AddDbContext<SandBoxAPIContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("SandBoxAPIContext")));
+
+            services.AddScoped<WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

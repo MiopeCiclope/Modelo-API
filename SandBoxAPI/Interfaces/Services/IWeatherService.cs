@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SandBoxAPI.Interfaces.Services
 {
-    public interface IWeatherService
+    public interface Service
     {
         List<WeatherForecast> GetAll();
     }
