@@ -1,4 +1,5 @@
-﻿using SandBoxAPI.Interfaces.Repositories;
+﻿using SandBoxAPI.Data;
+using SandBoxAPI.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace SandBoxAPI.Repositories
 {
-    public class WeatherRepository : IWeatherRepository
+    public class WeatherRepository : Repository<WeatherForecast, SandBoxAPIContext>
     {
         private static readonly string[] Summaries = new[]
 {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+
+        public WeatherRepository(SandBoxAPIContext context) : base(context)
+        { }
 
         public List<WeatherForecast> GetAll()
         {

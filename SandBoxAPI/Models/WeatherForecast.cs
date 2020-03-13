@@ -1,9 +1,11 @@
+using SandBoxAPI.Interfaces;
 using System;
 
 namespace SandBoxAPI
 {
-    public class WeatherForecast
+    public class WeatherForecast : IEntity
     {
+        public int Id { get; set; }
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
