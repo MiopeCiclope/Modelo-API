@@ -31,7 +31,7 @@ namespace SandBoxAPI
             services.AddControllers().AddNewtonsoftJson();
 
             services.AddDbContext<SandBoxAPIContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SandBoxAPIContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<WeatherForecastService>();
         }
