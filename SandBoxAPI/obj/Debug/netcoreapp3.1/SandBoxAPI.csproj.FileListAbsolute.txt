@@ -20,3 +20,4 @@ C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Newtonso
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.csproj.CopyComplete
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.csprojAssemblyReference.cache

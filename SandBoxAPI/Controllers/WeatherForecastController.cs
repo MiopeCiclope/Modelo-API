@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SandBoxAPI.Common;
+using SandBoxAPI.Interfaces.Services;
 using SandBoxAPI.Models;
+using SandBoxAPI.Services;
 
 namespace SandBoxAPI.Controllers
 {
@@ -14,35 +16,20 @@ namespace SandBoxAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IWeatherService _weatherService;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            _weatherService = new WeatherService();
         }
 
         [HttpGet]
         public HttpResponse<List<WeatherForecast>> Get([FromHeader] string headerExample, [FromBody]BodyModel bodyExample)
         {
-            _logger.LogTrace("Não Aparece nada");
-            _logger.LogInformation("Info verdinho tudo certo");
-            _logger.LogWarning(headerExample);
-            _logger.LogError(bodyExample.Key);
-            _logger.LogCritical("Gzus me salva");
-
-            var rng = new Random();
-            var weatherList = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToList();
+            var weatherList = _weatherService.GetAll();
+            _logger.LogInformation("WeatherForecast - GetAll");
 
             return new HttpResponse<List<WeatherForecast>>
             {
