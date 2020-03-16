@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using SandBoxAPI.Data;
 using SandBoxAPI.Services;
+using SandBoxAPI.Repositories;
+using SandBoxAPI.Interfaces;
 
 namespace SandBoxAPI
 {
@@ -33,6 +35,8 @@ namespace SandBoxAPI
             services.AddDbContext<SandBoxAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<DbContext, SandBoxAPIContext>();
+            services.AddScoped<WeatherRepository>();
             services.AddScoped<WeatherForecastService>();
         }
 

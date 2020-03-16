@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace SandBoxAPI.Repositories
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity>
+    public abstract class Repository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class, IEntity
+        where TContext : DbContext
     {
-        public readonly DbContext context;
-        public Repository(DbContext context)
+        public readonly TContext context;
+        public Repository(TContext context)
         {
             this.context = context;
         }

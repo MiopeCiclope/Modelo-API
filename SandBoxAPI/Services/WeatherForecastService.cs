@@ -1,5 +1,5 @@
 ﻿using SandBoxAPI.Data;
-using SandBoxAPI.Interfaces.Repositories;
+using SandBoxAPI.Interfaces;
 using SandBoxAPI.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,18 +9,8 @@ using System.Threading.Tasks;
 namespace SandBoxAPI.Services
 {
 
-    public class WeatherForecastService : Service<WeatherForecast, SandBoxAPIContext>
-    {
-        private readonly IWeatherRepository _weatherRepository;
-        
-        public WeatherForecastService(SandBoxAPIContext context) : base(context)
-        {
-            _weatherRepository = new WeatherRepository(this.context);
-        }
-
-        public List<WeatherForecast> GetAll()
-        {
-            return _weatherRepository.GetAll();
-        }
+    public class WeatherForecastService : Service<WeatherForecast, SandBoxAPIContext, WeatherRepository>
+    {       
+        public WeatherForecastService(SandBoxAPIContext context, WeatherRepository baseRepository) : base(context, baseRepository) {}
     }
 }
