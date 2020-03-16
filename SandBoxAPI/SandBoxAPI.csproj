@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -15,6 +15,12 @@
     <Compile Remove="Migrations\20200316173659_FK_Weather.Designer.cs" />
     <Compile Remove="Migrations\20200316173918_FK_Weather.cs" />
     <Compile Remove="Migrations\20200316173918_FK_Weather.Designer.cs" />
+    <Compile Remove="Migrations\20200316175518_FK_Country.cs" />
+    <Compile Remove="Migrations\20200316175518_FK_Country.Designer.cs" />
+    <Compile Remove="Migrations\20200316175626_FK_Country.cs" />
+    <Compile Remove="Migrations\20200316175626_FK_Country.Designer.cs" />
+    <Compile Remove="Migrations\20200316175758_FK_Country.cs" />
+    <Compile Remove="Migrations\20200316175758_FK_Country.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,5 +17,6 @@ namespace SandBoxAPI.Data
 
         public DbSet<SandBoxAPI.WeatherForecast> WeatherForecast { get; set; }
         public DbSet<SandBoxAPI.Models.Region> Region { get; set; }
+        public DbSet<SandBoxAPI.Models.Country> Country { get; set; }
     }
 }

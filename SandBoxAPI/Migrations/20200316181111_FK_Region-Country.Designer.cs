@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SandBoxAPI.Data;
 
 namespace SandBoxAPI.Migrations
 {
     [DbContext(typeof(SandBoxAPIContext))]
-    partial class SandBoxAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20200316181111_FK_Region-Country")]
+    partial class FK_RegionCountry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

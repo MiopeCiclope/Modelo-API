@@ -8,8 +8,8 @@ namespace SandBoxAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CountryController : CustomController<Country, CountryService>
+    public class RegionController : CustomController<Region, RegionService>
     {
-        public CountryController(CountryService service, ILogger<CountryController> logger) : base(service, logger) { }
+        public RegionController(RegionService service, ILogger<RegionController> logger) : base(service, logger) { }
     }
 }

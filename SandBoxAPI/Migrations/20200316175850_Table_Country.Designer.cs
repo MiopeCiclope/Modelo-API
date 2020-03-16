@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SandBoxAPI.Data;
 
 namespace SandBoxAPI.Migrations
 {
     [DbContext(typeof(SandBoxAPIContext))]
-    partial class SandBoxAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20200316175850_Table_Country")]
+    partial class Table_Country
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,8 +51,6 @@ namespace SandBoxAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CountryId");
-
                     b.ToTable("Region");
                 });
 
@@ -78,15 +78,6 @@ namespace SandBoxAPI.Migrations
                     b.HasIndex("RegionId");
 
                     b.ToTable("WeatherForecast");
-                });
-
-            modelBuilder.Entity("SandBoxAPI.Models.Region", b =>
-                {
-                    b.HasOne("SandBoxAPI.Models.Country", "Country")
-                        .WithMany()
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("SandBoxAPI.WeatherForecast", b =>
