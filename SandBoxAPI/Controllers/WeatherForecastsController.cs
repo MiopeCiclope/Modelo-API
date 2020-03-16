@@ -19,7 +19,6 @@ namespace SandBoxAPI.Controllers
     [ApiController]
     public class WeatherForecastsController : CustomController<WeatherForecast, WeatherForecastService>
     {
-        public WeatherForecastsController(WeatherForecastService service, ILogger<WeatherForecastsController> logger) : base(service, logger)
-        { }
+        public WeatherForecastsController(WeatherForecastService service, ILogger<WeatherForecastsController> logger) : base(service, logger) { }
     }
 }

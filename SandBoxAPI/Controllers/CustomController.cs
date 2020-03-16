@@ -46,7 +46,7 @@ namespace SandBoxAPI.Controllers
             
             return new HttpResponse<TEntity>
             {
-                IsStatusCodeSuccess = true,
+                IsStatusCodeSuccess = (statusRequest == HttpStatusCode.OK),
                 statusCode = statusRequest,
                 data = data
             };
@@ -62,7 +62,7 @@ namespace SandBoxAPI.Controllers
 
             return new HttpResponse<TEntity>
             {
-                IsStatusCodeSuccess = true,
+                IsStatusCodeSuccess = (statusRequest == HttpStatusCode.OK),
                 statusCode = statusRequest,
                 data = updatedData
             };
