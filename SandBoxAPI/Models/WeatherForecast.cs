@@ -1,5 +1,7 @@
 using SandBoxAPI.Interfaces;
+using SandBoxAPI.Models;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SandBoxAPI
 {
@@ -10,5 +12,9 @@ namespace SandBoxAPI
         public int TemperatureC { get; set; }
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
         public string Summary { get; set; }
+        [ForeignKey("Id")]
+        public int? RegionId { get; set; }
+
+        public Region? Region { get; set; }
     }
 }
