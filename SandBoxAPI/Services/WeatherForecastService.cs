@@ -15,7 +15,7 @@ namespace SandBoxAPI.Services
         
         public WeatherForecastService(SandBoxAPIContext context) : base(context)
         {
-            _weatherRepository = new WeatherRepository();
+            _weatherRepository = new WeatherRepository(this.context);
         }
 
         public List<WeatherForecast> GetAll()

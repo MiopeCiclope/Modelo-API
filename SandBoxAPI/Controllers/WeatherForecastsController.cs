@@ -27,11 +27,5 @@ namespace SandBoxAPI.Controllers
         {
             return this._service.GetAll();
         }
-
-        private bool WeatherForecastExists(int id)
-        {
-            //return _context.WeatherForecast.Any(e => e.Id == id);
-            return false;
-        }
     }
 }

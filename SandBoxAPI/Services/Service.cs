@@ -11,7 +11,7 @@ namespace SandBoxAPI.Services
         where TEntity : class, IEntity
         where TContext : DbContext
     {
-        private readonly TContext context;
+        public readonly TContext context;
         public Service(TContext context)
         {
             this.context = context;
