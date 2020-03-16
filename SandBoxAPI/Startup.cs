@@ -38,6 +38,10 @@ namespace SandBoxAPI
             services.AddScoped<DbContext, SandBoxAPIContext>();
             services.AddScoped<WeatherRepository>();
             services.AddScoped<WeatherForecastService>();
+
+            services.AddScoped<RegionRepository>();
+            services.AddScoped<RegionService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
