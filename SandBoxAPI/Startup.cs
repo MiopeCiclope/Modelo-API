@@ -42,6 +42,9 @@ namespace SandBoxAPI
             services.AddScoped<RegionRepository>();
             services.AddScoped<RegionService>();
 
+            services.AddScoped<CountryRepository>();
+            services.AddScoped<CountryService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

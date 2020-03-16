@@ -14,12 +14,12 @@ namespace SandBoxAPI.Services
             this.regionRepository = new RegionRepository(context);
         }
 
-        public override WeatherForecast Get(int id)
-        {
-            var weather = base.Get(id);
-            weather.Region = this.regionRepository.Get(weather.RegionId ?? 0);
+        //public override WeatherForecast Get(int id)
+        //{
+        //    var weather = base.Get(id);
+        //    weather.Region = this.regionRepository.Get(weather.RegionId ?? 0);
 
-            return weather;
-        }
+        //    return weather;
+        //}
     }
 }
