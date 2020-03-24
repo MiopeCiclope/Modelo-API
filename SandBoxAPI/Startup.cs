@@ -15,6 +15,7 @@ using SandBoxAPI.Data;
 using SandBoxAPI.Services;
 using SandBoxAPI.Repositories;
 using SandBoxAPI.Interfaces;
+using Microsoft.OpenApi.Models;
 
 namespace SandBoxAPI
 {
@@ -31,6 +32,22 @@ namespace SandBoxAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Indicadores Econômicos",
+                        Version = "v1",
+                        Description = "Exemplo de API REST criada com o ASP.NET Core 3.0 para consulta a indicadores econômicos",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Renato Groffe",
+                            Url = new Uri("https://github.com/renatogroffe")
+                        }
+                    });
+            });
 
             services.AddDbContext<SandBoxAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -50,6 +67,12 @@ namespace SandBoxAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Ativando middlewares para uso do Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Indicadores Econômicos V1");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -142,5 +142,10 @@ C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\ru\Micro
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.csprojAssemblyReference.cache
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Romulo\Desktop\Romulo\Repos\SandBoxAPI\obj\Debug\netcoreapp3.1\SandBoxAPI.MvcApplicationPartsAssemblyInfo.cache
